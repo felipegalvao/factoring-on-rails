@@ -7,6 +7,16 @@ pt-BR:
         restrict_dependent_destroy:
           has_one: Não é possível excluir o registro pois existe um %{record} dependente
           has_many: Não é possível excluir o registro pois existem %{record} dependentes
+    attributes:
+      budget:
+        requester_name: Nome do solicitante
+        requester_email: Email do solicitante
+        company_name: Nome da empresa
+        monthly_revenue: Faturamento mensal
+        duplicate_value: Valor do título
+        days_until_due_date: Dias até o vencimento
+        tax_value: Valor da taxa
+        value_to_pay: Valor a pagar
   date:
     abbr_day_names:
     - Dom
