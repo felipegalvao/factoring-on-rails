@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  requester_name: MyString
+  requester_email: MyString
+  company_name: MyString
+  monthly_revenue: 9.99
+  duplicate_value: 9.99
+  days_until_due_date: 1
+  tax_value: 9.99
+  value_to_pay: 9.99
+
+two:
+  requester_name: MyString
+  requester_email: MyString
+  company_name: MyString
+  monthly_revenue: 9.99
+  duplicate_value: 9.99
+  days_until_due_date: 1
+  tax_value: 9.99
+  value_to_pay: 9.99
