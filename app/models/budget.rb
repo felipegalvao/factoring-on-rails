@@ -16,5 +16,7 @@ class Budget < ApplicationRecord
   validates :company_name, presence: true
   validates :monthly_revenue, presence: true
   validates :duplicate_value, presence: true
+  validates :duplicate_value, :numericality => { :greater_than_or_equal_to => 500 }
   validates :days_until_due_date, presence: true
+  validates :days_until_due_date, :numericality => { :greater_than_or_equal_to => 10 }
 end
