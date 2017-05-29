@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   root 'budgets#new'
+  post '/', to: 'budgets#create'
+  get '/:id', to: 'budgets#show'
 
-  get 'budgets/show'
-
-  get 'budgets/create'
+  # get 'budgets/show'
 
 
 end

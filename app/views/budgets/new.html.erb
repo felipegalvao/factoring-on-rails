@@ -3,33 +3,35 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for @budget, url: {action: "create"} do |f| %>
+      <%= render 'shared/error_messages' %>
+
       <div>
-        <%= f.label :requester_name %>
+        <%= f.label :requester_name, "Nome do Solicitante" %>
         <%= f.text_field :requester_name %>
       </div>
 
       <div>
-        <%= f.label :requester_email %>
+        <%= f.label :requester_email, "Email do Solicitante" %>
         <%= f.email_field :requester_email %>
       </div>
 
       <div>
-        <%= f.label :company_name %>
+        <%= f.label :company_name, "Nome da Empresa" %>
         <%= f.text_field :company_name %>
       </div>
 
       <div>
-        <%= f.label :monthly_revenue %>
+        <%= f.label :monthly_revenue, "Faturamento Mensal" %>
         <%= f.number_field :monthly_revenue %>
       </div>
 
       <div>
-        <%= f.label :duplicate_value %>
+        <%= f.label :duplicate_value, "Valor do Título" %>
         <%= f.number_field :duplicate_value %>
       </div>
 
       <div>
-        <%= f.label :days_until_due_date %>
+        <%= f.label :days_until_due_date, "Dias até o vencimento" %>
         <%= f.number_field :days_until_due_date %>
       </div>
 
