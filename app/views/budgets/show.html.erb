@@ -1,2 +1,9 @@
-<h1>Budgets#show</h1>
-<p>Find me in app/views/budgets/show.html.erb</p>
+<h1>Solicitação para <%= @budget.company_name %></h1>
+<p><strong>Nome do Solicitante: </strong><%= @budget.requester_name %></p>
+<p><strong>Email do Solicitante: </strong><%= @budget.requester_email %></p>
+<p><strong>Nome da Empresa: </strong><%= @budget.company_name %></p>
+<p><strong>Faturamento Mensal: </strong><%= @budget.monthly_revenue %></p>
+<p><strong>Valor do Título: </strong><%= @budget.duplicate_value %></p>
+<p><strong>Dias até o vencimento: </strong><%= @budget.days_until_due_date %></p>
+<p><strong>Valor da Taxa: </strong><%= @budget.tax_value %></p>
+<p><strong>Valor a Receber: </strong><%= @budget.value_to_pay %></p>
