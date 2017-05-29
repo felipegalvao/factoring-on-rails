@@ -7,6 +7,7 @@ class BudgetsController < ApplicationController
   end
 
   def show
+    @budget = Budget.find(params[:id])
   end
 
   def create
