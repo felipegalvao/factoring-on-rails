@@ -1,9 +1,7 @@
 <% if @budget.errors.any? %>
-  <div id="error_explanation">
-    <ul>
+  <div class="alert alert-danger">
     <% @budget.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
+      <p><%= msg %></p>
     <% end %>
-    </ul>
   </div>
 <% end %>

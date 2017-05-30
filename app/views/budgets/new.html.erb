@@ -1,42 +1,46 @@
-<h1>Faça uma simulação</h1>
-
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for @budget, url: {action: "create"} do |f| %>
+  <div class="col-md-12">
+    <h1 class="text-center">Faça uma simulação para seu título</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <p>Campos obrigatórios marcados com *
+    <%= form_for @budget, :html => {:class => 'form'}, url: {action: "create"} do |f| %>
       <%= render 'shared/error_messages' %>
 
-      <div>
+      <div class="form-group">
         <%= f.label :requester_name, "Nome do Solicitante" %>
-        <%= f.text_field :requester_name %>
+        <%= f.text_field :requester_name, class: "form-control" %>
       </div>
 
-      <div>
-        <%= f.label :requester_email, "Email do Solicitante" %>
-        <%= f.email_field :requester_email %>
+      <div class="form-group">
+        <%= f.label :requester_email,  "Email do Solicitante *" %>
+        <%= f.email_field :requester_email, class: "form-control", :required => true %>
       </div>
 
-      <div>
-        <%= f.label :company_name, "Nome da Empresa" %>
-        <%= f.text_field :company_name %>
+      <div class="form-group">
+        <%= f.label :company_name, "Nome da Empresa *" %>
+        <%= f.text_field :company_name, class: "form-control", :required => true %>
       </div>
 
-      <div>
-        <%= f.label :monthly_revenue, "Faturamento Mensal" %>
-        <%= f.number_field :monthly_revenue %>
+      <div class="form-group">
+        <%= f.label :monthly_revenue, "Faturamento Mensal (R$) *" %>
+        <%= f.number_field :monthly_revenue, class: "form-control", :required => true %>
       </div>
 
-      <div>
-        <%= f.label :duplicate_value, "Valor do Título" %>
-        <%= f.number_field :duplicate_value %>
+      <div class="form-group">
+        <%= f.label :duplicate_value, "Valor do Título (Valor Mínimo de R$ 500,00) *" %>
+        <%= f.number_field :duplicate_value, class: "form-control", :required => true %>
       </div>
 
-      <div>
-        <%= f.label :days_until_due_date, "Dias até o vencimento" %>
-        <%= f.number_field :days_until_due_date %>
+      <div class="form-group">
+        <%= f.label :days_until_due_date, "Dias até o vencimento (no mínimo 10) *" %>
+        <%= f.number_field :days_until_due_date, class: "form-control", :required => true %>
       </div>
 
-      <div>
-        <%= f.submit "Submeter", class: "btn btn-primary" %>
+      <div class="form-group">
+        <%= f.submit "Submeter", class: "btn btn-primary btn-block" %>
       </div>
     <% end %>
   </div>

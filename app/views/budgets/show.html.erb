@@ -1,9 +1,18 @@
-<h1>Solicitação para <%= @budget.company_name %></h1>
-<p><strong>Nome do Solicitante: </strong><%= @budget.requester_name %></p>
-<p><strong>Email do Solicitante: </strong><%= @budget.requester_email %></p>
-<p><strong>Nome da Empresa: </strong><%= @budget.company_name %></p>
-<p><strong>Faturamento Mensal: </strong><%= @budget.monthly_revenue %></p>
-<p><strong>Valor do Título: </strong><%= @budget.duplicate_value %></p>
-<p><strong>Dias até o vencimento: </strong><%= @budget.days_until_due_date %></p>
-<p><strong>Valor da Taxa: </strong><%= @budget.tax_value %></p>
-<p><strong>Valor a Receber: </strong><%= @budget.value_to_pay %></p>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h1 class="text-center">Simulação para <%= @budget.company_name %></h1>
+    <div class="jumbotron">
+      <p><strong>Nome do Solicitante: </strong><%= @budget.requester_name %></p>
+      <p><strong>Email do Solicitante: </strong><%= @budget.requester_email %></p>
+      <p><strong>Nome da Empresa: </strong><%= @budget.company_name %></p>
+      <p><strong>Faturamento Mensal: </strong><%= number_to_currency(@budget.monthly_revenue, :unit => "R$") %></p>
+      <p><strong>Valor do Título: </strong><%= number_to_currency(@budget.duplicate_value, :unit => "R$") %></p>
+      <p><strong>Dias até o vencimento: </strong><%= @budget.days_until_due_date %></p>
+    </div>
+    <div class="jumbotron">
+      <p><strong>Valor da Taxa: </strong><%= number_to_currency(@budget.tax_value, :unit => "R$") %></p>
+      <p><strong>Valor a Receber: </strong><%= number_to_currency(@budget.value_to_pay, :unit => "R$") %></p>
+    </div>
+
+  </div>
+</div>
