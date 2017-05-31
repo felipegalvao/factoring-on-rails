@@ -3,7 +3,7 @@
 Esta aplicação em Rails simula o valor de operações através do formulário
 apresentado.
 
-Usei Bootstrap para o layout responsivo.
+Utilização de Bootstrap para o layout responsivo.
 
 Link para demo hospedada no Heroku: https://limitless-cove-52665.herokuapp.com/
 
