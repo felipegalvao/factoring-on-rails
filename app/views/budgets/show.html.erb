@@ -14,5 +14,7 @@
       <p><strong>Valor a Receber: </strong><%= number_to_currency(@budget.value_to_pay, :unit => "R$") %></p>
     </div>
 
+    <%= link_to "Fazer Nova Simulação", budgets_new_url, class: "btn btn-default btn-block" %>
+
   </div>
 </div>
