@@ -1,24 +1,14 @@
-# README
+# Factoring on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Esta aplicação em Rails simula o valor de operações através do formulário
+apresentado.
 
-Things you may want to cover:
+Usei Bootstrap para o layout.
 
-* Ruby version
+Link para demo hospedada no Heroku: https://limitless-cove-52665.herokuapp.com/
 
-* System dependencies
+## Instruções para execução local
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Clonar o repositório
+- Executar o comando "bundle install --without production"
+- Executar o comando "rails s"
